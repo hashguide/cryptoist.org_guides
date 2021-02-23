@@ -2,7 +2,7 @@
 In this guide, I will be showing you how to verify smart contracts on POA's Blockscout Block Explorer. Blockscout is an Open Source Ethereum Block Explorer which will work with any EVM-based blockchain network. Blockscout is a masterpiece provided to the Ethereum Developer Community & has been introduced as a deployable application on Amazon's AWS Computing Sector.
 
 ## Before we begin
-To follow along with this guide, make sure you already have a Smart Contract deployed to a Blockchain Network that is supported by the offical Blockscout.com block explorer or seperate instance that could be deployed by other teams in the crypto space. Blockchains supported by Blockscout.com are; xDai, POA Core & POA Sokol Test, Ethereum Classic, & RSK.
+To follow along with this guide, make sure you already have a Smart Contract deployed to a Blockchain Network that is supported by the offical Blockscout.com block explorer or separate instance that could be deployed by other teams in the crypto space. Blockchains supported by Blockscout.com are; xDai, POA Core & POA Sokol Test, Ethereum Classic, & RSK.
 
 ### Need a contract to verify?
 If you do not have a smart contract deployed to one of these networks, you could begin with my other guide showing you how to Deploy your own ERC20 Token to POA's Sokol Test Network. The ERC20 Deployment guide uses the solidity development tool Truffle to deploy & manage contracts & we used OpenZeppelin library of smart contracts to write our token contract using ERC Standard contracts we already know have been tested.
@@ -13,9 +13,9 @@ After have deploying a smart contract to a network, we make use of the Transacti
 ### Make note of
 When you are writing your smart contracts with whichever tool you choose, always make note of the SOLC version or whichever compiler you are using. You will also want to note whether or not you are using smart contract optimization. If you are using contract optimization, note how many optimization runs the compiler has made. With the many Hard Forks Ethereum has gone through preparing for the proof-of-work conversion to a staking consensus, we also need to keep track of the EVM version used during deployment. If you are unsure of this setting, just leave it at the default because chances are you used that version to deploy to.
 
-## The precedure
+## The procedure
 ### Flattening our contract
-If OpenZeppelin has been used or seperate contract files for your deployment, you will need to flatten your smart contracts. This combines all code to a single document & removes all import statements made within the code, thus preparing it for validation. To do this, we will use an tool called `truffle-flattener`. You can install it globally using `npm` or `yarn` with the following commands within system terminal.
+If OpenZeppelin has been used or separate contract files for your deployment, you will need to flatten your smart contracts. This combines all code to a single document & removes all import statements made within the code, thus preparing it for validation. To do this, we will use an tool called `truffle-flattener`. You can install it globally using `npm` or `yarn` with the following commands within system terminal.
 
 `npm i -g truffle-flattener`
 OR
@@ -29,7 +29,7 @@ To run this tool against your current project, you would run the following comma
 _**You will need to remove the additional `SPDX-License-Identifier` statements within the flattened file in order for verification to be successful**_
 
 ### Navigating Blockscout
-- Go to Blockscout.com & locate the smart contract that you would like to verify or go to the address used to deploy contract. Look for the smart contract you would like to verify & it will be easier to open two pages in seperate tabs to obtain data as needed. First open up the 'Contract Address' in one tab & 'Transaction Hash' of the same contract that was deployed.
+- Go to Blockscout.com & locate the smart contract that you would like to verify or go to the address used to deploy contract. Look for the smart contract you would like to verify & it will be easier to open two pages in separate tabs to obtain data as needed. First open up the 'Contract Address' in one tab & 'Transaction Hash' of the same contract that was deployed.
   
 ![Image of a transaction block on Blockscout.com](./verify_contract_screenshots/blockscout_transaction_hash_block.png)
 
